@@ -1,0 +1,17 @@
+{
+    "light": {
+        "bg": "#fff",
+        "del": "#f00",
+        "text": "#003"
+    },
+    "one-dark": {
+        "bg": "#282c34",
+        "del": "#e06c75",
+        "text": "#abb2bf"
+    },
+    "ayu-dark": {
+        "bg": "#0b0e14",
+        "del": "#d95757",
+        "text": "#ffb454"
+    }
+}

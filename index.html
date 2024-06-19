@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Todo-list</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📃Todo-List📃</h1>
+            <div class="theme-box">
+                Themes:
+                <div><input type="radio" name="theme" id="light" onclick="theme()" checked><label
+                        for="light">Light</label></div>
+                <div><input type="radio" name="theme" id="one-dark" onclick="theme()"><label for="one-dark">One Dark</label></div>
+                <div><input type="radio" name="theme" id="ayu-dark" onclick="theme()"><label for="ayu-dark">Ayu
+                        Dark</label></div>
+            </div>
+        </div>
+        <div class="body">
+            <p class="debug">test-body</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

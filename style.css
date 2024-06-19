@@ -1,0 +1,47 @@
+:root {
+	font-family: "Roboto", sans-serif;
+	font-weight: 500;
+	font-style: normal;
+	--bg: #fff;
+	--del: #f00;
+	--text: #003;
+	color: var(--text);
+	background-color: var(--bg);
+}
+
+.container {
+	display: grid;
+	grid-template-rows: 10vh auto;
+    
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+}
+.header h1 {
+	text-align: center;
+	font-family: "Roboto", sans-serif;
+	font-weight: 900;
+	font-style: normal;
+    margin: 0;
+}
+
+.theme-box {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    border: 3px solid var(--text);
+    padding: 7px;
+    border-radius: 12px;
+    user-select: none;
+}
+
+input[name=theme] {
+	accent-color: var(--text);
+}
+
+/* DEBUG */
+.debug {
+	border: 2px solid red;
+}
