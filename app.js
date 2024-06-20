@@ -1,5 +1,3 @@
-let root = document.querySelector(':root');
-
 let themes = undefined;
 (function load_theme(){
     fetch('themes.json')
@@ -21,6 +19,6 @@ function theme() {
     document.documentElement.style.setProperty('--bg', themes[current_mode].bg);
     document.documentElement.style.setProperty('--del', themes[current_mode].del);
     document.documentElement.style.setProperty('--text', themes[current_mode].text);
-
-
 }
+
+let list = {}
