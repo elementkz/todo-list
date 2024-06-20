@@ -11,65 +11,68 @@
 }
 
 .container {
-	display: grid;
-	grid-template-rows: 1fr 8fr 1fr;
+    display:grid;
+    grid-template-areas: 
+    "header"
+    "body"
+    "footer";
+    grid-template-rows: 10vh 70vh 10vh;
+    gap: 3vh;
 }
 
 .header {
+    grid-area: header;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
 }
 .header h1 {
-	text-align: center;
-	font-family: "Roboto", sans-serif;
-	font-weight: 900;
-	font-style: normal;
-    margin: 0;
+    font-size: 2rem;
+    margin: 1rem;
+    text-align: center;
+}
+.header .theme-box {
+    display: flex;
+    align-items: center;
+    border: 3px solid var(--text);
+    border-radius: 1rem;
+    padding: 0.5rem;
 }
 
 .body {
+    grid-area: body;
     height: 100%;
-    width: 50vw;
-    margin: 0 auto;
 }
 
 .footer {
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-content: center;
-}
-.footer input {   
-    background-color: var(--bg);
-    color: var(--text);
-    border: 3px solid var(--text);
-    width: 25vw;
-    border-radius: 4px;
-}
-.footer button {
-    background-color: var(--bg);
-    color: var(--text);
-    border: 3px solid var(--text);
-    width: 5vw;
-    border-radius: 4px;
-}
-
-.theme-box {
+    grid-area: footer;
     display: flex;
     flex-direction: row;
-    margin: 0 auto;
-    border: 3px solid var(--text);
-    padding: 7px;
-    border-radius: 12px;
-    user-select: none;
+    align-items: center;
+    justify-content: center;
 }
 
-input[name=theme] {
-	accent-color: var(--text);
+.footer .input-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 40vw;
+    padding: 0rem;
 }
+.footer input{
+    width: 70%;
+}
+
+.footer input, .footer button {
+    background-color: var(--bg);
+    color: var(--text);
+    border: 2px solid var(--text);
+    font-size: 1.5rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+}
+
+
 
 /* DEBUG */
 .debug {
