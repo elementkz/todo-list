@@ -92,7 +92,8 @@
 }
 
 .notes > div:last-child {
-    padding-bottom: 70px;
+    padding-bottom: 70px; 
+    /* todo: looks ugly but works, fix it later */
 }
 .notes > div > :first-child {
     font-weight: 300;

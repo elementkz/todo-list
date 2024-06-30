@@ -33,7 +33,11 @@ function add_item() {
 		nt.append(nt_date, nt_content);
 		document.querySelector('.body .notes').appendChild(nt);
 		nt.setAttribute('id', note.id);
-		// document.querySelector('notes').appendChild(nt);
 	}
 
 }
+
+document.getElementById('new-todo').addEventListener('keypress', e => {
+	if (e.key === 'Enter')
+		add_item();
+});
