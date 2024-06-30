@@ -1,29 +1,3 @@
-let themes = undefined;
-(function load_theme() {
-	fetch("themes.json")
-		.then((res) => res.json())
-		.then((json) => (themes = json));
-})();
-
-function theme() {
-	if (typeof themes === "undefined")
-		console.error("[App Error] Failed to load themes");
-
-	let current_mode = document.querySelector('input[name="theme"]:checked').id;
-	if (typeof current_mode === "undefined")
-		console.error("[App Error] Failed to load current theme");
-
-	document.documentElement.style.setProperty("--bg", themes[current_mode].bg);
-	document.documentElement.style.setProperty(
-		"--del",
-		themes[current_mode].del
-	);
-	document.documentElement.style.setProperty(
-		"--text",
-		themes[current_mode].text
-	);
-}
-
 function note_template(id, content, timestamp) {
 	this.id = id;
 	this.content = content;
@@ -32,10 +6,19 @@ function note_template(id, content, timestamp) {
 
 let list = [];
 
+let id = 1;
+function get_id() {
+	let temp = id;
+	id++;
+	return temp;
+}
+
 function add_item() {
 	let input = document.getElementById("new-todo").value;
 	if (input != "") {
-		list.push(new note_template(1, input, Date.now()));
+		list.push(new note_template(get_id(), input, Date.now()));
 		document.getElementById("new-todo").value = "";
 	}
+
+	console.log(list);
 }
