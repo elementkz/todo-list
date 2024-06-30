@@ -39,10 +39,6 @@
     padding: 0.5rem;
 }
 
-.body {
-    grid-area: body;
-    height: 100%;
-}
 
 .footer {
     grid-area: footer;
@@ -50,6 +46,10 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    
+    position:fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 .footer .input-box{
@@ -71,7 +71,32 @@
     font-family: "Roboto", sans-serif;
     font-weight: 500;
 }
+.body {
+    grid-area: body;
+    height: 100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
 
+.body .notes {
+    display:flex;
+    flex-direction: column;
+}
+
+.notes > div {
+    border: 1px solid var(--text);
+    padding: 25px;
+    border-radius: 12px;
+    margin: 10px;
+}
+
+.notes > div:last-child {
+    padding-bottom: 70px;
+}
+.notes > div > :first-child {
+    font-weight: 300;
+}
 
 
 /* DEBUG */
